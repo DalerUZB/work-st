@@ -125,8 +125,8 @@ const Wrapper = styled.div`
           transform: translateY(-50%);
           left: 12px;
           background: rgba(255, 255, 255, 0.1);
-          width: 30px;
-          height: 30px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           text-align: center;
           padding: 6px;
@@ -152,13 +152,13 @@ const Wrapper = styled.div`
         .icon {
           position: absolute;
           top: 50%;
-          left: 10px;
+          left: 12px;
           transform: translateY(-50%);
           background: rgba(18, 18, 18, 0.1);
           border-radius: 50%;
           padding: 6px;
-          width: 30px;
-          height: 30px;
+          width: 24px;
+          height: 24px;
           img {
             width: 100%;
           }
@@ -182,13 +182,13 @@ const Wrapper = styled.div`
         .icon {
           position: absolute;
           top: 50%;
-          left: 10px;
+          left: 12px;
           transform: translateY(-50%);
           background: rgba(18, 18, 18, 0.1);
           border-radius: 50%;
           padding: 6px;
-          width: 30px;
-          height: 30px;
+          width: 24px;
+          height: 24px;
           img {
             width: 100%;
           }
@@ -212,13 +212,13 @@ const Wrapper = styled.div`
         .icon {
           position: absolute;
           top: 50%;
-          left: 10px;
+          left: 12px;
           transform: translateY(-50%);
           background: rgba(18, 18, 18, 0.1);
           border-radius: 50%;
           padding: 6px;
-          width: 30px;
-          height: 30px;
+          width: 24px;
+          height: 24px;
           img {
             width: 100%;
           }
