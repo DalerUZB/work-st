@@ -27,10 +27,6 @@ const Home = () => {
       id: 4,
     },
   ];
-  const [items, setItems] = useState(0);
-  function setTheme(index) {
-    setItems(index);
-  }
 
   return (
     <Wrapper>
@@ -39,14 +35,12 @@ const Home = () => {
           Вы можете связаться с нами в любое время через
         </div>
         <div className="inputs">
-          {arr.map((item, index) => (
-            <div onClick={() => setTheme(index)} key={item.id}>
+          {arr.map((item) => (
+            <div key={item.id}>
               <span className="icon">
                 <img src={item.icon} alt={item.icon} />
               </span>
-              <button className={items === index ? "theme" : ""}>
-                {item.name}
-              </button>
+              <button>{item.name}</button>
             </div>
           ))}
           <button className="btn">Send your info now</button>
@@ -66,6 +60,7 @@ const Wrapper = styled.div`
   background: #faf9fb;
   padding-top: 100px;
   margin-top: 4px;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -95,6 +90,7 @@ const Wrapper = styled.div`
       align-content: flex-start;
       padding: 30px 30px 0;
       gap: 20px;
+
       div:nth-child(1) {
         width: 70%;
         height: 50px;
@@ -106,6 +102,7 @@ const Wrapper = styled.div`
         display: flex;
         position: relative;
         button {
+          cursor: pointer;
           width: 100%;
           height: 100%;
           border-radius: 100px;
@@ -118,6 +115,7 @@ const Wrapper = styled.div`
           font-size: 24px;
           line-height: 30px;
           color: #fdfdfd;
+          background: #a044fa;
         }
         .icon {
           position: absolute;
@@ -148,6 +146,12 @@ const Wrapper = styled.div`
           text-align: left;
           padding-left: 60px;
           border: 1px dashed #000000;
+          opacity: 0.3;
+          cursor: pointer;
+          &:focus {
+            border-color: #a044fa;
+            opacity: 1;
+          }
         }
         .icon {
           position: absolute;
@@ -167,17 +171,28 @@ const Wrapper = styled.div`
       div:nth-child(3) {
         width: 48.5%;
         height: 50px;
-        border: 1px dashed #000000;
         border-radius: 100px;
         position: relative;
-
         button {
+          cursor: pointer;
           width: 100%;
           height: 100%;
           border-radius: 100px;
           border: none;
           text-align: left;
           padding-left: 60px;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          border: none;
+          text-align: left;
+          padding-left: 60px;
+          border: 1px dashed #000000;
+          opacity: 0.3;
+          &:focus {
+            border-color: #a044fa;
+            opacity: 1;
+          }
         }
         .icon {
           position: absolute;
@@ -197,17 +212,22 @@ const Wrapper = styled.div`
       div:nth-child(4) {
         width: 48.5%;
         height: 50px;
-        border: 1px dashed #000000;
         border-radius: 100px;
         position: relative;
-
         button {
+          cursor: pointer;
           width: 100%;
           height: 100%;
           border-radius: 100px;
           border: none;
           text-align: left;
           padding-left: 60px;
+          border: 1px dashed #000000;
+          opacity: 0.3;
+          &:focus {
+            border-color: #a044fa;
+            opacity: 1;
+          }
         }
         .icon {
           position: absolute;
@@ -237,6 +257,8 @@ const Wrapper = styled.div`
       line-height: 30px;
       background: #121212;
       color: #ffffff;
+      cursor: pointer;
+
       border: none;
     }
   }
